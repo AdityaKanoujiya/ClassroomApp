@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ClassroomApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    <string name="web_client_id">-->
+    <!--190026049252-1lsit7cenrh8bgh7uhcti6eder0np6mu.apps.googleusercontent.com-->
+    <!--    </string>-->
+
+    <string name="openNav">OpenNav</string>
+    <string name="closeNav">CloseNav</string>
+    <string name="pdf_file_not_selected">Pdf file not selected</string>
+
+</resources>

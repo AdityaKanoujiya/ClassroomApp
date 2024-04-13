@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+        android:fitsSystemWindows="true"
+    tools:context=".Homepage"
+    android:orientation="horizontal">
+
+
+    <!--    androidx.drawerlayout.widget.DrawerLayout-->
+
+<!--    <androidx.drawerlayout.widget.DrawerLayout-->
+
+<!--    android:id="@+id/drawerLayout"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:openDrawer="start">-->
+
+<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fitsSystemWindows="true">-->
+
+<!--        &lt;!&ndash; Screen content &ndash;&gt;-->
+<!--        &lt;!&ndash; Use app:layout_behavior="@string/appbar_scrolling_view_behavior" to fit below top app bar &ndash;&gt;-->
+
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+
+
+
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--    android:layout_width="200dp"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:id="@+id/nav_view"-->
+<!--    android:layout_gravity="start"-->
+<!--    android:background="@color/white"-->
+<!--    app:headerLayout="@layout/nav_header"-->
+<!--    app:menu="@menu/nav_menu"-->
+<!--    app:itemTextColor="@color/black"-->
+<!--    app:itemIconTint="@color/black"-->
+<!--    />-->
+
+<!--    </androidx.drawerlayout.widget.DrawerLayout>-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:contextClickable="true"
+            android:hint="Search"
+            android:visibility="gone"
+            app:autoShowKeyboard="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:useDrawerArrowDrawable="true" />
+
+        />
+
+
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+<!--    <com.google.android.material.divider.MaterialDivider-->
+<!--        android:id="@+id/materialDivider"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="12dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/searchBar"-->
+<!--        />-->
+
+    <FrameLayout
+        android:id="@+id/Fragment_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        app:layout_constraintVertical_bias="0.0" />
+    <!--        app:layout_constraintTop_toBottomOf="@+id/materialDivider"-->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:padding="15dp"
+        android:gravity="center"
+        android:background="@drawable/bottombarshape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            app:cardCornerRadius="256dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:padding="5dp">-->
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/baseline_home_24"
+            />
+<!--        </androidx.cardview.widget.CardView>-->
+
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            app:cardCornerRadius="256dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:padding="5dp">-->
+        <ImageButton
+            android:id="@+id/todo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:src="@drawable/calendar"
+            />
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            app:cardCornerRadius="256dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:padding="5dp">-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/add"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@null"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/add"-->
+<!--            app:tint="@color/black"-->
+<!--            />-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            app:cardCornerRadius="256dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:padding="5dp">-->
+
+
+        <ImageButton
+            android:id="@+id/chats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:src="@drawable/chat"
+            android:text="Home" />
+
+<!--        </androidx.cardview.widget.CardView>-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            app:cardCornerRadius="256dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:padding="5dp">-->
+        <ImageButton
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_menu_24"
+            android:text="Home" />
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <com.google.android.material.circularreveal.cardview.CircularRevealCardView-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/circularRevealCardView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="5dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/searchBar"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/searchBar">-->
+
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/profileImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/google" />
+
+<!--        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

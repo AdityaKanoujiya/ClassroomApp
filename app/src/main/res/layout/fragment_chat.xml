@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/anton"
+            android:text="Notes"
+            android:textColor="#4CAF50"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:fontFamily="@font/anton" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="22dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="search_btn"
+            android:src="@drawable/baseline_search_24"
+            app:maxImageSize="30dp"
+            app:fabCustomSize="30dp"
+            app:backgroundTint="@color/black"
+            tools:layout_gravity="right" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        app:fabCustomSize="40dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#4CAF50"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:orientation="horizontal"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="30dp"-->
+<!--    tools:context=".ChatFragment">-->
+
+<!--<ImageView-->
+<!--    android:id="@+id/idPhoto"-->
+<!--    android:layout_gravity="center_vertical"-->
+<!--    android:layout_width="50dp"-->
+<!--    android:layout_height="50dp"-->
+
+<!--    />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/idName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="IdName"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_margin="5dp"-->
+
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/lastText"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="lastText"-->
+<!--            android:textSize="18sp"-->
+
+<!--            />-->
+<!--    </LinearLayout>-->
+<!--</LinearLayout>-->

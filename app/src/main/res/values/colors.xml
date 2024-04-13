@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="rich_black">#031926ff</color>
+    <color name="light_cyan">#c0eef2ff</color>
+    <color name="mustard">#ffd965ff</color>
+    <color name="thulian_pink">#e06c9fff</color>
+    <color name="baby_powder">#f9f8f5ff</color>
+    <color name="delete_color">#C33D33</color>
+
+
+</resources>
+
+
+<!--    /* CSS HEX */-->
+<!--    &#45;&#45;rich-black: #031926ff;-->
+<!--    &#45;&#45;light-cyan: #c0eef2ff;-->
+<!--    &#45;&#45;mustard: #ffd965ff;-->
+<!--    &#45;&#45;thulian-pink: #e06c9fff;-->
+<!--    &#45;&#45;baby-powder: #f9f8f5ff;-->
+
+<!--    /* CSS HSL */-->
+<!--    &#45;&#45;rich-black: hsla(202, 85%, 8%, 1);-->
+<!--    &#45;&#45;light-cyan: hsla(185, 66%, 85%, 1);-->
+<!--    &#45;&#45;mustard: hsla(45, 100%, 70%, 1);-->
+<!--    &#45;&#45;thulian-pink: hsla(334, 65%, 65%, 1);-->
+<!--    &#45;&#45;baby-powder: hsla(45, 25%, 97%, 1);-->
+
+<!--    /* SCSS HEX */-->
+<!--    $rich-black: #031926ff;-->
+<!--    $light-cyan: #c0eef2ff;-->
+<!--    $mustard: #ffd965ff;-->
+<!--    $thulian-pink: #e06c9fff;-->
+<!--    $baby-powder: #f9f8f5ff;-->
+
+<!--    /* SCSS HSL */-->
+<!--    $rich-black: hsla(202, 85%, 8%, 1);-->
+<!--    $light-cyan: hsla(185, 66%, 85%, 1);-->
+<!--    $mustard: hsla(45, 100%, 70%, 1);-->
+<!--    $thulian-pink: hsla(334, 65%, 65%, 1);-->
+<!--    $baby-powder: hsla(45, 25%, 97%, 1);-->
+
+<!--    /* SCSS RGB */-->
+<!--    $rich-black: rgba(3, 25, 38, 1);-->
+<!--    $light-cyan: rgba(192, 238, 242, 1);-->
+<!--    $mustard: rgba(255, 217, 101, 1);-->
+<!--    $thulian-pink: rgba(224, 108, 159, 1);-->
+<!--    $baby-powder: rgba(249, 248, 245, 1);-->
+
+<!--    /* SCSS Gradient */-->
+<!--    $gradient-top: linear-gradient(0deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-right: linear-gradient(90deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-bottom: linear-gradient(180deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-left: linear-gradient(270deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-top-right: linear-gradient(45deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-bottom-right: linear-gradient(135deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-top-left: linear-gradient(225deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-bottom-left: linear-gradient(315deg, #031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
+<!--    $gradient-radial: radial-gradient(#031926ff, #c0eef2ff, #ffd965ff, #e06c9fff, #f9f8f5ff);-->
