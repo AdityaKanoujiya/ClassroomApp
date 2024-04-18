@@ -88,5 +88,7 @@ dependencies {
     implementation("androidx.room:room-ktx:$room_version")
 
     implementation("it.xabaras.android:recyclerview-swipedecorator:1.4")
+//    implementation("com.github.QuadFlask:colorpicker:0.0.15")
+
 
 }

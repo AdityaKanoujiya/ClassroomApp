@@ -7,6 +7,22 @@
     android:padding="30dp"
     tools:context=".CreateClassFragment">
 
+    <TextView
+        android:id="@+id/pageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/anton"
+        android:text="Create Class"
+        android:textColor="#4CAF50"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/anton" />
 
     <EditText
         android:id="@+id/txtBatch"
@@ -16,7 +32,8 @@
         android:hint="Batch"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/pageName"
+        />
 
     <EditText
         android:id="@+id/txtSubject"

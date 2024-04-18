@@ -15,5 +15,7 @@
         android:startColor="#4CAF50"
         android:endColor="@color/white"
         />
-
+    <!--    3cbcf0   blue-->
+    <!--    e4e0e2   cream white-->
+    <!--    4CAF50  green-->
 </shape>

@@ -106,8 +106,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-    android:backgroundTint="@color/thulian_pink"
+        android:backgroundTint="@color/thulian_pink"
         android:text="Show All Pdf"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/pdfFileName"
         app:layout_constraintStart_toStartOf="@+id/pdfFileName"
         app:layout_constraintTop_toBottomOf="@+id/btnUploadPdf" />

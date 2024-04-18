@@ -16,29 +16,35 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ChatFragment : Fragment() {
-    private lateinit var appDb: NotesDatabase
-    private lateinit var recyclerView: RecyclerView
     private lateinit var notesAdapter: NotesAdapter
+    private lateinit var appDb: NotesDatabase
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_chat, container, false)
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+        val addBtn: FloatingActionButton = view.findViewById(R.id.btn_add)
 
         appDb = NotesDatabase.getDatabase(requireContext())
-        val addBtn: FloatingActionButton = view.findViewById(R.id.btn_add)
-        recyclerView = view.findViewById(R.id.recyclerView)
 
-        // Set up RecyclerView and Adapter
+        // Initialize NotesAdapter with note click handler
         notesAdapter = NotesAdapter(
+            onNoteClick = { note ->
+                val bottomSheet = AddNoteFragment.newInstance(note) { updatedNote ->
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        appDb.notesDao().upsertNotes(updatedNote)
+                    }
+                }
+                bottomSheet.show(requireActivity().supportFragmentManager, "AddNoteFragment")
+            },
             onDeleteClick = { note ->
-                // Launch a coroutine to delete the note when onDeleteClick is called
                 lifecycleScope.launch(Dispatchers.IO) {
                     appDb.notesDao().deleteNotes(note)
                 }
             },
-            lifecycleOwner = viewLifecycleOwner // Pass the lifecycle owner to the adapter
+            lifecycleOwner = viewLifecycleOwner
         )
 
         recyclerView.apply {
@@ -47,12 +53,21 @@ class ChatFragment : Fragment() {
         }
 
         addBtn.setOnClickListener {
-            val bottomSheet = AddNoteBottomSheet()
-            bottomSheet.show(requireActivity().supportFragmentManager, "AddNoteBottomSheet")
+            val bottomSheet = AddNoteFragment.newInstance(null) { newNote ->
+                lifecycleScope.launch(Dispatchers.IO) {
+                    appDb.notesDao().upsertNotes(newNote)
+                }
+            }
+            bottomSheet.show(requireActivity().supportFragmentManager, "AddNoteFragment")
         }
+
+        appDb.notesDao().getall().observe(viewLifecycleOwner, Observer { notesList ->
+            notesAdapter.submitList(notesList)
+        })
 
         return view
     }
+
 
     override fun onResume() {
         super.onResume()

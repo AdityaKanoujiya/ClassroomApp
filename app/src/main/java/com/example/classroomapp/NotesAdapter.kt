@@ -17,9 +17,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class NotesAdapter(
+    private val onNoteClick: (NotesRecord) -> Unit, // Add this parameter
     private val onDeleteClick: suspend (NotesRecord) -> Unit,
     private val lifecycleOwner: LifecycleOwner
 ) : ListAdapter<NotesRecord, NotesAdapter.NotesViewHolder>(NotesDiffCallback()) {
+
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -45,12 +49,15 @@ class NotesAdapter(
             dateTextView.text = "${note.date} ${note.time}"
             card.setBackgroundColor(Color.parseColor(note.bgcolor))
 
-            // Set OnClickListener on the delete button
             deleteButton.setOnClickListener {
-                // Launch a coroutine within the lifecycle owner
                 lifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
-                    onDeleteClick(note) // Call the provided suspend function to handle deletion
+                    onDeleteClick(note)
                 }
+            }
+
+            // Handle note click to edit the note
+            itemView.setOnClickListener {
+                onNoteClick(note)
             }
         }
     }

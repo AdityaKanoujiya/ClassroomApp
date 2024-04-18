@@ -64,7 +64,7 @@ class PomoFragment : Fragment() {
                 binding.txt.text = "Long Break!!"
             } else {
                 startTimer(if (!isWorking) WORK_TIME_MINUTES else BREAK_TIME_MINUTES, 0)
-                binding.txt.text = if (isWorking) "Work Time !!" else "Break !!"
+                binding.txt.text = if (isWorking) "Work Time " else "Break !!"
             }
         }
         updateButtonText()
